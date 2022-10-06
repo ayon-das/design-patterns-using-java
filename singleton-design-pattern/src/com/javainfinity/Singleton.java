@@ -5,6 +5,7 @@ public class Singleton {
 	/*private static volatile Singleton INSTANCE = new Singleton();*/
 	
 	private static volatile Singleton INSTANCE;
+	int data=20;
 	
 	private Singleton() {}
 	

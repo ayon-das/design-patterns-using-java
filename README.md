@@ -1,6 +1,20 @@
 ## Design patterns using java
 Implemented design patterns using java.
 
+### Singleton design pattern
+[Singleton design pattern](https://github.com/ayon-das/design-patterns-using-java/tree/main/singleton-design-pattern)
+When only one instance of the class is needed throughout the application and its modules. This is also called a shared resource.
+Examples - DB connection, Logger instance etc. If we use global variables for data to achieve this, it might resolve our problem
+only for reading the data, not for writing. So, this can be resolved by creating a thread safe singleton class, which maintains only one instance throughout the application.
+
+Steps to implement singleton design pattern:
+- Create a class which needs to be singleton.
+- make it's default constructor private.
+- Create a volatile variable of the class type.
+- (Optional)Initialize it creating an object of your class if you want eager initialization. i.e. if you want your application to create instance when you run the application.
+- Implement a method following thread safety, which will be used to get the instance.
+- You can also use some data variables to test.
+
 ### Factory design pattern
 [Factory design pattern](https://github.com/ayon-das/design-patterns-using-java/tree/main/factory-design-pattern)
 
@@ -18,4 +32,4 @@ Steps to implement factory design pattern:
 - Changing the factory class accordingly for singleton. Check the code.
 - Change the config file and client class accordingly with singleton key.
 
-Conclusion: As a java programmer, we know that in spring framework, we have bean factory which returns us the bean required during runtime. To specify a bean either we write in xml configuration or we mark the bean with @component annotation.
+Conclusion: As a java programmer, we know that in spring framework, we have bean factory which returns us the bean required during runtime. To specify a bean either we write in xml configuration or we mark the bean with @component annotation. So, bean factory is implemented using factpry design pattern.
