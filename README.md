@@ -32,4 +32,4 @@ Steps to implement factory design pattern:
 - Changing the factory class accordingly for singleton. Check the code.
 - Change the config file and client class accordingly with singleton key.
 
-Conclusion: As a java programmer, we know that in spring framework, we have bean factory which returns us the bean required during runtime. To specify a bean either we write in xml configuration or we mark the bean with @component annotation. So, bean factory is implemented using factpry design pattern.
+Conclusion: As a java programmer, we know that in spring framework, we have bean factory which returns us the bean required during runtime. To specify a bean either we write in xml configuration or we mark the bean with @component annotation. So, bean factory is implemented using factory design pattern.
