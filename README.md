@@ -10,7 +10,7 @@ only for reading the data, not for writing. So, this can be resolved by creating
 Steps to implement singleton design pattern:
 - Create a class which needs to be singleton.
 - make it's default constructor private.
-- Create a volatile variable of the class type.
+- Create a volatile variable of the class type. (We have to declare the variable as volatile bcz. because of the thread data visibility issue)
 - (Optional)Initialize it creating an object of your class if you want eager initialization. i.e. if you want your application to create instance when you run the application.
 - Implement a method following thread safety, which will be used to get the instance.
 - You can also use some data variables to test.
