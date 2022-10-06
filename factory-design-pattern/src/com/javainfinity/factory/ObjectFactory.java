@@ -8,7 +8,7 @@ import java.util.Properties;
 
 import com.javainfinity.annotations.Singleton;
 
-public class ObjectFactory {
+public class ObjectFactory implements IObjectFactory{
 	Properties prop;
 	public ObjectFactory(String source) throws FileNotFoundException, IOException {
 		prop = new Properties();

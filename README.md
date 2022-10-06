@@ -15,13 +15,14 @@ Steps to implement singleton design pattern:
 - Implement a method following thread safety, which will be used to get the instance.
 - You can also use some data variables to test.
 
-### Factory design pattern
+### Factory method design pattern
 [Factory design pattern](https://github.com/ayon-das/design-patterns-using-java/tree/main/factory-design-pattern)
 
 Steps to implement factory design pattern:
 - Create EmployeeRepository interface.
 - Create EmployeeRepositoryImpl class.
 - Create a client class, where create an object of EmployeeRepositoryImpl class and use add method to add some employees and find method to find employees. As a client we are unaware of the EmployeeRepositoryImpl class. We are only aware of EmployeeRepository interface. To make this dynamic we will create a factory.
+- Create an interface called IObjectFactory with a method "get" and return type as "Object", we will implement the get method in implementation class.
 - Create an ObjectFactory class. Implement a get method and use class.forName("com.javainfinity.provider.EmployeeRepositoryImpl") and return object like claz.getConstructor().newInstance().
 - Change client class accordingly by creating object factory and call get method to get the instance of EmployeeRepositoryImpl
 - Let's make this dynamic too. Create a config.properties class. Implement propeties and accept key in the get method in the object factory class.

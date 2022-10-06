@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
+import com.javainfinity.factory.IObjectFactory;
 import com.javainfinity.factory.ObjectFactory;
 import com.javainfinity.provider.EmployeeRepository;
 
@@ -12,7 +13,7 @@ public class Client {
 	IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, 
 	SecurityException, FileNotFoundException, IOException {
 		
-		ObjectFactory factory = new ObjectFactory("config.properties");
+		IObjectFactory factory = new ObjectFactory("config.properties");
 		
 		/*Check config.properties file. Change to emp-repo instead of emp-repo-singleton when using prototype instance*/
 		EmployeeRepository empRepo = (EmployeeRepository) factory.get("emp-repo-singleton");
