@@ -3,6 +3,7 @@ Implemented design patterns using java.
 
 ### Singleton design pattern
 [Singleton design pattern](https://github.com/ayon-das/design-patterns-using-java/tree/main/singleton-design-pattern)
+
 When only one instance of the class is needed throughout the application and its modules. This is also called a shared resource.
 Examples - DB connection, Logger instance etc. If we use global variables for data to achieve this, it might resolve our problem
 only for reading the data, not for writing. So, this can be resolved by creating a thread safe singleton class, which maintains only one instance throughout the application.
@@ -34,3 +35,19 @@ Steps to implement factory design pattern:
 - Change the config file and client class accordingly with singleton key.
 
 Conclusion: As a java programmer, we know that in spring framework, we have bean factory which returns us the bean required during runtime. To specify a bean either we write in xml configuration or we mark the bean with @component annotation. So, bean factory is implemented using factory design pattern.
+
+### Abstract factory method design pattern
+[Abstract factory design pattern](https://github.com/ayon-das/design-patterns-using-java/tree/main/abstract-factory-design-pattern)
+
+Abstract factory method design pattern is also known as factory of generic factory patterns. Sometimes, we may need to create factories which return similar objects.
+For example in the above factory method pattern, what if we want our object factory to return only repository objects. If we want to create another actory only 
+for services. For that we have to make that factory as repository factory. And on the top of that we have to create a global object factory which based on logic returns
+the generic factory instance to the client.
+
+Steps to implement abstract factory design pattern:
+- Will continue with the factory method design pattern example.
+- Rename the interface ObjectFactory to IRepositoryFactory. Rename the impl to same.
+- Create an interface IObjectFactory with a get method taking two arguments - type of factory, source config file.
+- Create an impl class for IObjectFactory. Implement switch case for the type of factory and return factory impl instance(we can make this dynamic too instead of tight coupling, using config)
+- Implement the client class to create global object factory instance and get generic object factory instance from it !
+- You can implement a service factory to call from client and inside service you can implement repo factory and so on.
