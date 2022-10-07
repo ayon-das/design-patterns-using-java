@@ -22,6 +22,8 @@ Steps to implement singleton design pattern:
 ### Factory method design pattern
 [Factory design pattern](https://github.com/ayon-das/design-patterns-using-java/tree/main/factory-design-pattern)
 
+Factory design pattern is used to create an object factory from where you can get objects as a client when you need. As a client when you are unaware of the impl class, you are unable to do an initialization. Also, you should follow a dynamic relationship between a client and api, also known as loose coupling, as we have seen in spring boot.
+
 Steps to implement factory design pattern:
 - Create EmployeeRepository interface.
 - Create EmployeeRepositoryImpl class.
