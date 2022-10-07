@@ -1,6 +1,9 @@
 ## Design patterns using java
 Implemented design patterns using java.
 
+## Creational design patterns
+Below we have discussed how to implement creational design patterns. Follow the steps and implement. It will help you to understand better.
+
 ### Singleton design pattern
 [Singleton design pattern](https://github.com/ayon-das/design-patterns-using-java/tree/main/singleton-design-pattern)
 
@@ -67,3 +70,6 @@ Steps to implement builder design pattern:
 - Create a build method in the inner class returning new instance of URIbuilder passing builder(this) as parameter.
 - Implement to string in URIbuilder for checking output.
 - Create the client class.
+
+## Structural design patterns
+Below we have discussed how to implement structural design patterns. Follow the steps and implement. It will help you to understand better.
