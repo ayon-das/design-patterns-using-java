@@ -51,3 +51,19 @@ Steps to implement abstract factory design pattern:
 - Create an impl class for IObjectFactory. Implement switch case for the type of factory and return factory impl instance(we can make this dynamic too instead of tight coupling, using config)
 - Implement the client class to create global object factory instance and get generic object factory instance from it !
 - You can implement a service factory to call from client and inside service you can implement repo factory and so on.
+
+### Builder design pattern
+[Builder design pattern](https://github.com/ayon-das/design-patterns-using-java/tree/main/builder-design-pattern)
+
+Sometimes while instantiating a class we might need not to instantiate all fields of that class. So, parameterized constructor is out of picture here.
+We could use setters for this. So, we can follow a pattern for this to make the task easier.
+
+We will be implementing an URL builder.
+Steps to implement builder design pattern:
+- Create a class called URIbuilder. Define all the fields requires in an url.
+- Create an inner static class called Builder. Here too define the same fields as above. 
+- Create setters in the inner class with return type as builder.
+- Create a parameterized constructor in the URIbuilder class with builder as parameter.
+- Create a build method in the inner class returning new instance of URIbuilder passing builder(this) as parameter.
+- Implement to string in URIbuilder for checking output.
+- Create the client class.
